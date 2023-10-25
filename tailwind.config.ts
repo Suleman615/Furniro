@@ -30,7 +30,8 @@ const config: Config = {
         'sm': '14px',
         'md': '20px',
         'lg': '24px',
-        'xl': '28px'
+        'xl': '28px',
+        '2xl': '38px'
       }
     },
   },

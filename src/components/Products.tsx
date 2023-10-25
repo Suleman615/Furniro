@@ -6,7 +6,7 @@ export default function Products() {
 
         <div className="flex flex-col items-center mb-6">
             <p className="text-center font-bold text-lg ">Our Products</p>
-            <div className="flex flex-wrap justify-center gap-4 my-10  px-0 md:px-20 lg:px-44 ">
+            <div className="flex flex-wrap justify-center gap-4 my-10  px-0 md:px-20 lg:px-32 ">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

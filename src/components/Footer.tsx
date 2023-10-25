@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            <div className=" mt-16 py-10 border-t flex px-10 justify-around flex-wrap gap-10">
+            <div className="  py-10 border-t flex px-10 justify-around flex-wrap gap-10">
                 <div className="">
                     <h3 className="text-lg font-bold">Frnoro.</h3>
                     <p className="text-grey text-sm my-10 font-semibold leading-4">400 University Drive Suite 200 Coral <br /> Gables,<br /> FL 33134 USA</p>

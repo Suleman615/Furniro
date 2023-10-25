@@ -9,7 +9,7 @@ export default function Navbar() {
         <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:px-6 fixed w-full bg-opacity-70 z-10">
 
             <div className="flex justify-between items-center  w-full md:w-auto">
-                <Link href='/Home'><img className="h-16 w-28 object-contain" src="/assets/logo-name-black.png" alt="" /></Link>
+                <Link href='/'><img className="h-16 w-28 object-contain" src="/assets/logo-name-black.png" alt="" /></Link>
 
                 <span onClick={() => { setShoeNavbar(!showNavbar) }} className="visible sm:hidden  "><Menu /></span></div>
             <div className={` ${(showNavbar) ? 'visible flex' : 'hidden'}  sm:flex flex-col sm:flex-row gap-2 sm:gap-10`}>
