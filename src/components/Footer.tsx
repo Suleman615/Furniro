@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <div className="  py-10 border-t flex px-10 justify-around flex-wrap gap-10">
                 <div className="">
-                    <h3 className="text-lg font-bold">Frnoro.</h3>
+                    <h3 className="text-lg font-bold">Frniro.</h3>
                     <p className="text-grey text-sm my-10 font-semibold leading-4">400 University Drive Suite 200 Coral <br /> Gables,<br /> FL 33134 USA</p>
                 </div>
                 <div>

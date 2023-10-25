@@ -16,7 +16,7 @@ export default function ProductCard({ prop }: any) {
             </div>
             {focus &&
                 <div className="absolute flex flex-col  bg-grey justify-center items-center w-full h-full top-0 bg-opacity-40">
-                    <button className="bg-white text-brown text-sm px-6 py-1 font-semibold cursor-pointer">Add To Cart</button>
+                    <button className="bg-white text-brown text-sm px-6 py-2 font-semibold cursor-pointer">Add To Cart</button>
                     <div className="flex text-white gap-3 text-sm  ">
                         <span className="flex items-center cursor-pointer hover:text-brown"><Share2 size={16} />Share</span>
                         <span className="flex items-center cursor-pointer hover:text-brown"><ArrowLeftRight size={16} />Compare</span>

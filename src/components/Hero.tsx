@@ -8,7 +8,7 @@ export default function Hero() {
                 <p className="text-md font-semibold">New Arrival</p>
                 <p className="text-xl font-bold text-brown leading-8 my-4">Discover Our <br /> New Collection</p>
                 <p className="text-sm text-grey ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                <button className="border  my-4 px-6 py-2 rounded-lg border-brown text-brown   hover:text-white hover:bg-brown">Buy Now</button>
+                <button className="btn rounded my-2 bg-medium">Buy Now</button>
             </div>
 
         </div>
