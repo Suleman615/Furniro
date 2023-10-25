@@ -14,7 +14,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-3 mx-3 my-10 md:mx-40">
-                    <div className="flex flex-col ms-0 md:ms-20  flex-grow gap-8 my-6">
+                    <div className="flex flex-col  ms-10  md:ms-20  flex-grow gap-8 my-6">
 
                         <div className="flex gap-3">
                             <MapPin />
@@ -44,7 +44,7 @@ export default function Contact() {
 
                         {/* ************ Contact Form ************* */}
 
-                        <form className="flex w-[400px] mx-auto flex-col" action="" method="post">
+                        <form className="flex  w-[20rem] md:w-[30rem] mx-auto flex-col" action="" method="post">
                             <span className="form-span">
                                 <label htmlFor="name">Name</label>
                                 <input className="form-input" type="text" name="name" />
