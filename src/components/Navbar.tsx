@@ -13,7 +13,7 @@ export default function Navbar() {
 
                 <span onClick={() => { setShoeNavbar(!showNavbar) }} className="visible sm:hidden  "><Menu /></span></div>
             <div className={` ${(showNavbar) ? 'visible flex' : 'hidden'}  sm:flex flex-col sm:flex-row gap-2 sm:gap-10`}>
-                <Link className="hover:text-brown font-semibold" href='/Home'>Home</Link>
+                <Link className="hover:text-brown font-semibold" href='/'>Home</Link>
                 <Link className="hover:text-brown font-semibold" href='/Shop'>Shop</Link>
                 <Link className="hover:text-brown font-semibold" href='/About'>About</Link>
                 <Link className="hover:text-brown font-semibold" href='./Contact'>Contact</Link>
