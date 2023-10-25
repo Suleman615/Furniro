@@ -72,7 +72,6 @@ export default function Shop() {
                 <button className="border bg-medium px-3 py-1 rounded">Next</button>
             </div>
 
-            <Features />
 
 
 

@@ -24,3 +24,10 @@
         @apply text-brown text-sm px-6 py-2 my-2 w-fit font-semibold cursor-pointer border-2 border-brown hover:bg-brown hover:text-white
     }
 }
+
+.mask-shape {
+    mask: url('/assets/blob.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
