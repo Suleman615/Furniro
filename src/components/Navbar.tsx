@@ -6,7 +6,7 @@ import { Menu, Heart, UserCircleIcon, SearchIcon, BaggageClaim } from 'lucide-re
 export default function Navbar() {
     const [showNavbar, setShoeNavbar] = useState(false)
     return (
-        <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:px-6 ">
+        <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:px-6 fixed w-full bg-opacity-70 z-10">
 
             <div className="flex justify-between items-center  w-full md:w-auto">
                 <Link href='/Home'><img className="h-16 w-28 object-contain" src="/assets/logo-name-black.png" alt="" /></Link>

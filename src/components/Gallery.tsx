@@ -11,13 +11,13 @@ export default function Gallery() {
             <div className="grid grid-flow-row grid-cols-8 my-6">
 
                 {/* left Images  */}
-                <div className="col-span-3">
+                <div className="col-span-8 md:col-span-3">
                     <div className="h-72 ps-4 py-2 ">
                         <img className="object-cover w-full h-full" src="/assets/p5.jpg" alt="" />
                     </div>
                     <div className=" h-72 flex">
                         <div className=" w-[40%]">
-                            <img src="/assets/p4.jpg" alt="" />
+                            <img className="object-cover h-full " src="/assets/p4.jpg" alt="" />
                         </div>
                         <div className="flex-grow h-60 p-2 w-[50%]">
                             <img className="object-cover h-full " src="/assets/p10.jpg " alt="" />
@@ -26,13 +26,13 @@ export default function Gallery() {
                 </div>
 
                 {/* Center Image */}
-                <div className="col-span-2 p-3 flex items-center">
-                    <img src="/assets/p7.jpg" alt="" />
+                <div className="col-span-8  w-full md:col-span-2 p-3 flex items-center">
+                    <img className="h-full w-full object-cover" src="/assets/p7.jpg" alt="" />
 
                 </div>
 
                 {/* Right Images */}
-                <div className="col-span-3 ">
+                <div className="col-span-8 md:col-span-3 ">
                     <div className="flex h-80">
                         <div className="h-full pt-8 flex-1">
                             <img className="h-full w-full object-cover" src="/assets/p8.jpg" alt="" />
