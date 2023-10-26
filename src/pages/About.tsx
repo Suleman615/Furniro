@@ -1,8 +1,12 @@
 import PageHeading from "@/components/PageHeading";
-import { url } from "inspector";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { useState } from "react";
 
 
 export default function About() {
+    const [team1, setTeam1] = useState(true)
+    const [team2, setTeam2] = useState(false)
+
     return (
         <>
             <PageHeading target="About" />
@@ -19,12 +23,60 @@ export default function About() {
             </div>
 
             {/* *********** OUR TEAM ************ */}
-            <div className="mx-2 md:mx-20 my-10">
+            <div className=" mx-2 md:mx-20 my-10">
                 <h3 className="text-lg font-bold text-center">Meet Our <span className="text-brown">Team</span></h3>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div className="relative h-[1100px] w-full lg lg:h-96 py-10 flex  items-center">
+
+                    <ChevronLeft size={18} onClick={() => { setTeam1(true); setTeam2(false) }} className={`${(team1) ? 'bg-light ' : 'bg-brown cursor-pointer'}  absolute left-1 top-[40%] z-10 h-8 w-8 rounded-full `} />
+
+
+
+                    {/* ************ Team 1**************** */}
+
+                    {team1 && <>
+                        <div className="absolute w-full  flex flex-col items-center lg:flex-row justify-center gap-6 ">
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/ceo.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2">(CEO) <span className="text-brown">Krishan gopal</span></p>
+                            </div>
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/coo.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2" >(COO) <span className="text-brown">Gujjar</span></p>
+                            </div>
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/cto.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2">(CTO) <span className="text-brown">Gabbr</span></p>
+                            </div>
+                        </div>
+                    </>}
+
+                    {/* ************ Team 2**************** */}
+                    {team2 && <>
+                        <div className="absolute w-full  flex flex-col items-center lg:flex-row justify-center gap-6 ">
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/fo.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2">(FO) <span className="text-brown">Alizbath</span></p>
+                            </div>
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/pro.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2" >(PRO) <span className="text-brown">Sambara</span></p>
+                            </div>
+                            <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
+                                <img className="h-48 rounded-lg object-cover" src="/assets/hr.jpg" alt="" />
+                                <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                <p className="font-semibold ps-2">(HR) <span className="text-brown">Kanwal</span></p>
+                            </div>
+                        </div></>}
+
+
+
+                    <ChevronRight size={18} onClick={() => { setTeam1(false); setTeam2(true) }} className={`${(team2) ? 'bg-light ' : 'bg-brown cursor-pointer'}  absolute right-1 z-10 top-[40%] h-8 w-8 rounded-full `} />
+
                 </div>
             </div>
 
