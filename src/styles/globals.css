@@ -23,6 +23,10 @@
     .btn {
         @apply text-brown text-sm px-6 py-2 my-2 w-fit font-semibold cursor-pointer border-2 border-brown hover:bg-brown hover:text-white
     }
+
+    .image-cover {
+        @apply h-full w-full object-cover
+    }
 }
 
 .mask-shape {

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Image from "next/image"
 import { Share2, ArrowLeftRight, Heart } from "lucide-react"
 
 
@@ -8,7 +9,7 @@ export default function ProductCard({ prop }: any) {
     return (
         <div onMouseEnter={() => { setFocus(true) }} onMouseLeave={() => setFocus(false)} className=" bg-light w-64 relative  ">
             <span className="right-2 top-2 absolute w-8 h-8 flex justify-center items-center text-sm rounded-full bg-red-500">new</span>
-            <img className="h-72" src="/assets/hero-bg.jpg" alt="" />
+            <div className="h-72 relative"><Image fill={true} src="/assets/hero-bg.jpg" alt="" /></div>
             <div className="p-3">
                 <p className="text-md font-semibold">Lolito</p>
                 <p className="text-sm text-grey">Luxury Big sofa</p>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProductCard from "./ProductCard";
 
 
@@ -16,7 +17,7 @@ export default function Products() {
 
 
             </div>
-            <button className="px-4 py-1  text-brown font-semibold  border border-brown hover:bg-brown hover:text-white ">Show More</button>
+            <Link href='/Shop' className="btn">Show More</Link>
         </div>
     )
 }

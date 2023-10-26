@@ -1,4 +1,3 @@
-import Features from "@/components/Features";
 import PageHeading from "@/components/PageHeading";
 import ProductCard from "@/components/ProductCard";
 import { SlidersHorizontal } from "lucide-react";

@@ -1,5 +1,7 @@
 import PageHeading from "@/components/PageHeading";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import Image from "next/image";
+
 import { useState } from "react";
 
 
@@ -17,7 +19,7 @@ export default function About() {
                     <p className="text-grey mx-2">At <b>Furniro</b>, we are passionate about bringing convenience and style to your home furnishing needs. We understand that  furniture plays a crucial role in enhancing the quality of life, comfort, and aesthetics. Our team is dedicated to redefining the way you shop for furniture. We are more than just an online platform; we are your trusted partner in creating beautiful, functional spaces. With a commitment to quality, affordability, and seamless service, we offer a wide range of furniture options to cater to diverse tastes and requirements. Our mission is to make furnishing your home an enjoyable and hassle-free experience, just a click away. Discover the perfect pieces that resonate with your unique style at <b>Furniro</b>, where we bring the showroom to your doorstep.</p>
                 </div>
                 <div className="col-span-2 lg:col-span-1  flex-center ">
-                    <img className=" h-full w-full mask-shape  " src="/assets/p2.jpg" alt="" />
+                    <div className="relative  min-h-[400px] min-w-[400px]"><Image fill={true} className="  mask-shape  " src="/assets/p2.jpg" alt="" /></div>
                 </div>
 
             </div>
@@ -36,17 +38,17 @@ export default function About() {
                     {team1 && <>
                         <div className="absolute w-full  flex flex-col items-center lg:flex-row justify-center gap-6 ">
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/ceo.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/ceo.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2">(CEO) <span className="text-brown">Krishan gopal</span></p>
                             </div>
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/coo.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/coo.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2" >(COO) <span className="text-brown">Gujjar</span></p>
                             </div>
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/cto.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/cto.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2">(CTO) <span className="text-brown">Gabbr</span></p>
                             </div>
@@ -57,17 +59,17 @@ export default function About() {
                     {team2 && <>
                         <div className="absolute w-full  flex flex-col items-center lg:flex-row justify-center gap-6 ">
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/fo.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/fo.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2">(FO) <span className="text-brown">Alizbath</span></p>
                             </div>
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/pro.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/pro.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2" >(PRO) <span className="text-brown">Sambara</span></p>
                             </div>
                             <div className="w-60 md:w-72 lg:w-60  h-auto  pb-2">
-                                <img className="h-48 rounded-lg object-cover" src="/assets/hr.jpg" alt="" />
+                                <div className="h-48 relative"><Image fill={true} className=" rounded-lg object-cover" src="/assets/hr.jpg" alt="" /></div>
                                 <p className="pe-0 md:pe-6 ps-2 w-56 font-semibold py-1">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                                 <p className="font-semibold ps-2">(HR) <span className="text-brown">Kanwal</span></p>
                             </div>
@@ -87,11 +89,11 @@ export default function About() {
                     <p className="max-w-[600px] mx-auto">We partner with humble, trusting leaders that think strategically. Businessmen and women who believe in the change they’re making, embrace their mission and want to bring in a partner to accelerate their growth.</p>
                 </div>
                 <div className="flex-center flex-wrap my-10 gap-5">
-                    <img className="" src="/assets/logos/sponsor-1.png" alt="" />
-                    <img className="" src="/assets/logos/sponsor-2.png" alt="" />
-                    <img className="" src="/assets/logos/sponsor-3.png" alt="" />
-                    <img className="" src="/assets/logos/sponsor-4.png" alt="" />
-                    <img className="" src="/assets/logos/sponsor-5.png" alt="" />
+                    <Image width={150} height={60} className="" src="/assets/logos/sponsor-1.png" alt="" />
+                    <Image width={150} height={60} className="" src="/assets/logos/sponsor-2.png" alt="" />
+                    <Image width={150} height={60} className="" src="/assets/logos/sponsor-3.png" alt="" />
+                    <Image width={150} height={60} className="" src="/assets/logos/sponsor-4.png" alt="" />
+                    <Image width={150} height={60} className="" src="/assets/logos/sponsor-5.png" alt="" />
 
                 </div>
 
