@@ -19,8 +19,8 @@ export default function Gallery() {
                         <div className=" w-[40%] relative">
                             <Image fill={true} className="object-cover " src="/assets/p4.jpg" alt="" />
                         </div>
-                        <div className="flex-grow h-60 m-2 w-[50%] relative">
-                            <Image fill={true} className="object-cover " src="/assets/p10.jpg " alt="" />
+                        <div className=" h-60 m-2 w-[60%] relative">
+                            <Image fill={true} className="object-cover " src="/assets/p10.jpg" alt="" />
                         </div>
                     </div>
                 </div>
