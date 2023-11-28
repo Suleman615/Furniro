@@ -32,7 +32,9 @@ const config: Config = {
         'lg': '24px',
         'xl': '28px',
         '2xl': '38px'
-      }
+      },
+
+      // add here
     },
   },
   plugins: [],

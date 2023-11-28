@@ -27,6 +27,26 @@
     .image-cover {
         @apply h-full w-full object-cover
     }
+
+
+}
+
+
+
+
+.thin-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 2em
+}
+
+.thin-scrollbar::-webkit-scrollbar-track-piece {
+    background: #ccc;
+
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+
 }
 
 .mask-shape {
