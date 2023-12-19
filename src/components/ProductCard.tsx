@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Share2, ArrowLeftRight, Heart, Star, StarHalf } from "lucide-react"
 import { productDetailProps } from "@/types"
 import { useMyCart } from "@/contexts/cart"
-
+import { useCompare } from "@/contexts/compare"
 
 export default function ProductCard({ ID, title, colors, srcImage, stars, statusCode }: productDetailProps) {
     const [focus, setFocus] = useState(false)
@@ -15,16 +15,25 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
     let variableRating: number = stars - Math.floor(stars)
     rating = rating.slice(0, +Math.floor(stars))
 
-    const { cart, setCart } = useMyCart();
+    const { cart, setCart, saveToLocalStorage } = useMyCart();
+    const { compare, saveCompare } = useCompare()
+
+
+
 
     const updateCart = () => {
+
+
         var product = {
             id: ID,
-            Image: srcImage,
+            image: srcImage,
             title: title,
             quantity: 1,
         }
-
+        let tempcart = cart
+        tempcart.push(product)
+        setCart(tempcart)
+        saveToLocalStorage()
 
     }
 
@@ -77,7 +86,7 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
                     <button onClick={() => updateCart()} className="bg-white border-0 z-10 btn">Add To Cart</button>
                     <div className="flex text-white gap-3 text-sm  ">
                         <span className="flex items-center  hover:text-brown"><Share2 size={16} />Share</span>
-                        <Link href="/Comparison" className="flex items-center  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
+                        <Link onClick={saveCompare(ID)} href="/Comparison" className="flex items-center  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
                         <span className="flex items-center  hover:text-brown"><Heart size={16} />Like</span>
                     </div>
 

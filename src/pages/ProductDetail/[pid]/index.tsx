@@ -5,15 +5,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useMyCart } from "@/contexts/cart";
+import { usePathname } from "next/navigation";
 
 
 
 export default function ProductDetail() {
     const param = useRouter()
-    const { pid } = param.query;
+    // const pathname = usePathname()
+    let { pid } = param.query;
+
+    // // const { pid } = useParams();
+    // console.log('pathName: ', pathname);
+    // let paths = pathname?.split('/')
+    // let id = ''
+    // if (paths) {
+
+    //     id = paths[paths?.length - 1]
+    // }
+    // console.log('id: ', id);
+
+    // if (!pid) {
+    //     pid = id
+    // }
+
     let product = products.filter((p) => (p.webID == pid))[0]
 
-    const { cart, setCart } = useMyCart()
+    const { cart, setCart, saveToLocalStorage } = useMyCart()
 
 
 
@@ -47,16 +64,19 @@ export default function ProductDetail() {
 
 
     const updateCart = () => {
-        var products
-        products = {
+
+        // cart.some(obj => obj.id == product.webID)? cart[cart.findIndex(obj => obj.id == product.webID)].quantity = cart.quantity + 1 :
+
+        let newproduct = {
             id: product.webID,
             image: product.image.url,
             title: product.productTitle,
             quantity: 1,
         }
-        cart.push(products)
-        setCart(cart)
-        console.log(cart)
+        let cart2 = cart
+        cart2.push(newproduct)
+        setCart(cart2)
+        saveToLocalStorage()
     }
 
 
@@ -138,3 +158,14 @@ export default function ProductDetail() {
         </>
     )
 }
+
+
+// export async function getStaticPaths() {
+
+//     let paths = products.map(item => ({ params: { pid: item.webID } }))
+
+//     return {
+//         paths,
+//         fallback: true
+//     };
+// }

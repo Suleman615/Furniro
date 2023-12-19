@@ -4,6 +4,8 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useCompare } from "@/contexts/compare";
+
 const Noproduct = () => {
     return (
         <div className="w-[280px] h-48 flex-col flex-center gap-2 ">
@@ -18,6 +20,9 @@ const Noproduct = () => {
 export default function Comparison() {
 
     const pro = [2, 3, 0]
+
+    const { compare } = useCompare()
+    console.log(compare)
 
 
     return (
