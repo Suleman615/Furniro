@@ -36,54 +36,8 @@ export const CompareProvider = ({ children }: CompareProps) => {
         // preventDefault()
         let tempCompare: tempCompareProps[] = compare as tempCompareProps[];
 
-        // if (tempCompare.length === 2) {
-        //     console.log(" product 1 = " + tempCompare.length + " " + ID)
-        //     tempCompare[2] = products.filter((p) => (p.webID === ID))[0]
-        //     setCompare(tempCompare)
-        //     return
-
-        // }
-        // else if (tempCompare.length === 1) {
-        //     console.log(" product 2 = " + tempCompare.length + " " + ID)
-
-        //     tempCompare[1] = products.filter((p) => (p.webID == ID))[0]
-        //     setCompare(tempCompare)
-        //     return
-        // } else if (tempCompare.length === 0) {
-        //     console.log(" product 3 = " + tempCompare.length + " " + ID)
-
-        //     tempCompare[0] = products.filter((p) => (p.webID == ID))[0]
-        //     setCompare(tempCompare)
-        //     return
-        // }
-        // else if (tempCompare.length > 2 || tempCompare.length < 0) {
-        //     tempCompare = [];
-        //     console.log(" product 0 = " + tempCompare.length + " " + ID)
-
-        //     tempCompare[0] = products.filter((p) => (p.webID == ID))[0]
-        //     setCompare(tempCompare)
-        //     return
-        // }
-
-        console.log(ID)
 
 
-        if (tempCompare.length >= 3) {
-            if (!tempCompare.some((p: tempCompareProps) => p.webID == ID)) { tempCompare = [] }
-
-            tempCompare.push(products.filter((p) => (p.webID == ID))[0])
-            setCompare(tempCompare)
-
-        } else if (tempCompare.length < 3) {
-            if (!tempCompare.some(p => p.webID == ID)) {
-                tempCompare.push(products.filter(p => (p.webID == ID))[0])
-                setCompare(tempCompare)
-            }
-
-
-        }
-
-        localStorage.setItem("compare", JSON.stringify(compare))
     }
 
 
