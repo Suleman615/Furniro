@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// import { useCompare } from "@/contexts/compare";
+import { useCompare } from "@/contexts/compare";
 
 const Noproduct = () => {
     return (
@@ -21,8 +21,8 @@ export default function Comparison() {
 
     const pro = [2, 3, 0]
 
-    // const { compare } = useCompare()
-    // console.log(compare)
+    const { compare } = useCompare()
+    console.log(compare)
 
 
     return (
