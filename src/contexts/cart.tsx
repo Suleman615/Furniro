@@ -15,7 +15,7 @@ const MyCart = createContext<MyCartType | undefined>(undefined);
 
 export const CartProvider = ({ children }: MyCartProps) => {
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState<Array<Object>>([]);
 
     useEffect(() => {
         if (typeof window !== 'undefined' && window.localStorage) {

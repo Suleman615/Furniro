@@ -6,15 +6,26 @@ import { useMyCart } from "@/contexts/cart";
 
 
 
+
 interface cartProps {
     showCart: Function
 }
 
+interface CartItem {
+    image: string;
+    title: string;
+    quantity: number;
+}
+
+
+
+
 export default function Cart({ showCart }: cartProps) {
 
-    const { cart, setCart } = useMyCart()
-    console.log(cart)
+    let { cart, setCart } = useMyCart()
 
+    console.log(cart)
+    let tempCart: CartItem[] = cart as CartItem[]
 
 
 
@@ -28,7 +39,7 @@ export default function Cart({ showCart }: cartProps) {
 
 
                 <div className=" h-[70vh] overflow-y-scroll mb-20 thin-scrollbar pe-2 ">
-                    {cart.map((p) => (<div className="my-4 pb-2 flex gap-4 items-center border-b">
+                    {tempCart.map((p) => (<div className="my-4 pb-2 flex gap-4 items-center border-b">
 
 
                         <div className="w-20 h-20 relative">
