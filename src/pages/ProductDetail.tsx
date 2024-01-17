@@ -5,36 +5,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useMyCart } from "@/contexts/cart";
-import { usePathname } from "next/navigation";
 
 
+// interface productType {
+//     displayColor: string
+// }
 
 export default function ProductDetail() {
-    const param = useRouter()
-    // const pathname = usePathname()
-    let { pid } = param.query;
+    // const param = useRouter()
+    // let { pid } = param.query;
 
-    // // const { pid } = useParams();
-    // console.log('pathName: ', pathname);
-    // let paths = pathname?.split('/')
-    // let id = ''
-    // if (paths) {
 
-    //     id = paths[paths?.length - 1]
-    // }
-    // console.log('id: ', id);
+    let pid = localStorage.getItem('productDetail')
 
-    // if (!pid) {
-    //     pid = id
-    // }
+
 
     let product = products.filter((p) => (p.webID == pid))[0]
+
+    console.log("Product is" + product)
 
     const { cart, setCart, saveToLocalStorage } = useMyCart()
 
 
-
     const [currentColor, setCurrentColor] = useState(product.displayColor[0].replace(' ', '_'))
+
     let checkcolors: String[] = ['bg-[Green]', 'bg-[Red]', 'bg-[Blue]', 'bg-[Black]', 'bg-[Navy]', 'bg-[White]', 'bg-[Gray]', 'bg-[Grey]', 'bg-[Silver]', 'bg-[Crimson]', 'bg-[Purple]', 'bg-[Indigo]', 'bg-[Aqua]', 'bg-[Yellow]', 'bg-[Brown]', 'bg-[Chocolate]', 'bg-[Pink]', 'bg-[Olive]']
     var colorClasses: String[] = []
     var availableColors: String[] = []

@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:px-6 fixed  w-full bg-opacity-70 z-10">
+            <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:px-6 fixed  w-full bg-opacity-70 z-20">
 
                 <div className="flex justify-between items-center  w-full md:w-auto">
                     <Link className="relative h-16 w-28" href='/'><Image fill={true} className=" object-contain" src="/assets/logo-name-black.png" alt="" /></Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
                     <a className="hover:text-brown font" href="" target="_blank"><UserCircleIcon /></a>
                     <a className="hover:text-brown font" href="" target="_blank"><SearchIcon /></a>
                     <a className="hover:text-brown  font" href="" target="_blank"><Heart /></a>
-                    <button onClick={() => { setShowCart(true); document.body.style.overflow = 'hidden'; }} className="hover:text-brown font"  ><BaggageClaim /></button>
+                    <button onClick={() => { setShowCart(true); document.body.style.overflow = 'hidden'; }} className="hover:text-brown relative"  ><span className="absolute bg-red-600 rounded-full px-2 -top-3 text-white">{cart.length}</span> <BaggageClaim /></button>
                 </div>
             </nav>
             {showCart && <Cart showCart={setShowCart} />}

@@ -7,7 +7,7 @@ export interface fetchFurnitureProps {
 }
 
 export interface productDetailProps {
-    ID: number,
+    ID: string,
     title: string,
     colors: Array<String>
     srcImage: string

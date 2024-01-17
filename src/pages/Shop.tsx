@@ -82,7 +82,7 @@ export default function Shop() {
             {/***************** Products ************/}
             <div className="flex flex-wrap gap-3 justify-center my-10 px-6">
 
-                {products.map((p) => (<ProductCard key={+p.webID} ID={+p.webID} title={p.productTitle.split("®")[p.productTitle.split("®").length - 1]} colors={p.availableColr} srcImage={p.image.url} stars={p.rating.avgRating} statusCode={+p.prices[0].statusCode} />
+                {products.map((p) => (<ProductCard key={+p.webID} ID={p.webID} title={p.productTitle.split("®")[p.productTitle.split("®").length - 1]} colors={p.availableColr} srcImage={p.image.url} stars={p.rating.avgRating} statusCode={+p.prices[0].statusCode} />
                 ))}
 
 

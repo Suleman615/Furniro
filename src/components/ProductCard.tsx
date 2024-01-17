@@ -21,7 +21,8 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
 
 
 
-    const updateCart = () => {
+    const updateCart = (event: any) => {
+        event.preventDefault();
 
 
         var product = {
@@ -53,10 +54,18 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
     } catch (e: any) { (console.log("eror is  " + e)) }
 
 
+    const addtoFavourite = (event: any) => {
+        console.log('here')
+        event.preventDefault();
 
+    }
+
+    const saveDetails = () => {
+        localStorage.setItem('productDetail', ID)
+    }
 
     return (
-        <Link href={`/ProductDetail/${ID}`} onMouseEnter={() => { setFocus(true) }} onMouseLeave={() => setFocus(false)} className=" bg-light w-64  flex flex-col relative  ">
+        <div onMouseEnter={() => { setFocus(true) }} onMouseLeave={() => setFocus(false)} className=" bg-light w-64  flex flex-col relative  ">
             <span className="right-2 top-2 absolute w-10 h-10 text-white flex justify-center items-center text-sm rounded-full z-10 bg-red-500">-{statusCode}%</span>
             <div className="h-72 relative bg-medium"><Image fill={true} src={srcImage} alt="" /></div>
 
@@ -82,18 +91,18 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
                 <p className="font-semibold   ">RP. 7000 $</p>
             </div>
             {focus &&
-                <div className="absolute flex flex-col  bg-grey justify-center items-center w-full h-full top-0 bg-opacity-40">
-                    <button onClick={() => updateCart()} className="bg-white border-0 z-10 btn">Add To Cart</button>
+                <Link href={`/ProductDetail`} onClick={saveDetails} className="absolute flex flex-col  bg-grey justify-center items-center w-full h-full top-0 bg-opacity-40">
+                    <button onClick={(event) => updateCart(event)} className="bg-white border-0 z-10 btn">Add To Cart</button>
                     <div className="flex text-white gap-3 text-sm  ">
                         <span className="flex items-center  hover:text-brown"><Share2 size={16} />Share</span>
-                        <Link onClick={saveCompare(ID)} href="/Comparison" className="flex items-center  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
-                        <span className="flex items-center  hover:text-brown"><Heart size={16} />Like</span>
+                        <Link onClick={saveCompare(ID)} href="/Comparison" className="flex items-center z-30  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
+                        <button onClick={(event) => addtoFavourite(event)} className="flex items-center  hover:text-brown"><Heart size={16} />Like</button>
                     </div>
 
-                </div>
+                </Link>
             }
 
 
-        </Link>
+        </div>
     )
 }
