@@ -14,12 +14,12 @@ export default function Navbar() {
 
 
 
-    const { cart, setCart, saveToLocalStorage } = useMyCart();
+    const { cart } = useMyCart();
 
 
     return (
         <>
-            <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-0 md:pe-10 md:ps-4 fixed  w-[100vw] bg-opacity-90 z-20">
+            <nav className="flex bg-light flex-col sm:flex-row  justify-between items-center px-2 md:pe-10 md:ps-4 fixed  w-[100vw] bg-opacity-90 z-20">
 
                 <div className="flex justify-between items-center  w-full md:w-auto">
                     <Link className="relative h-16 w-28" href='/'><Image fill={true} className=" object-contain" src="/assets/logo-name-black.png" alt="" /></Link>
