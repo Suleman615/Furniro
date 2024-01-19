@@ -19,7 +19,7 @@ export default function About() {
                     <p className="text-grey mx-2">At <b>Furniro</b>, we are passionate about bringing convenience and style to your home furnishing needs. We understand that  furniture plays a crucial role in enhancing the quality of life, comfort, and aesthetics. Our team is dedicated to redefining the way you shop for furniture. We are more than just an online platform; we are your trusted partner in creating beautiful, functional spaces. With a commitment to quality, affordability, and seamless service, we offer a wide range of furniture options to cater to diverse tastes and requirements. Our mission is to make furnishing your home an enjoyable and hassle-free experience, just a click away. Discover the perfect pieces that resonate with your unique style at <b>Furniro</b>, where we bring the showroom to your doorstep.</p>
                 </div>
                 <div className="col-span-2 lg:col-span-1  flex-center ">
-                    <div className="relative  min-h-[400px] min-w-[400px]"><Image fill={true} className="  mask-shape  " src="/assets/p2.jpg" alt="" /></div>
+                    <div className="relative  min-h-[320px] min-w-[320px]"><Image fill={true} className="  mask-shape  " src="/assets/p2.jpg" alt="" /></div>
                 </div>
 
             </div>
