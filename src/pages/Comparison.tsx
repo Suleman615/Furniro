@@ -28,7 +28,7 @@ export default function Comparison() {
     return (
         <>
             <PageHeading target="Product Comparison" />
-            <div className="py-10 flex justify-center gap-10">
+            <div className="py-10  justify-center gap-10 w-full hidden lg:flex">
                 <div className="w-[250px] pe-20 p-3 h-48 ">
                     <h3 className="font-bold  text-md ">Go to Product page for more Products</h3>
                     <Link href="/Shop" className="text-grey border-b-2 border-grey w-fit  font-semibold cursor-pointer hover:text-brown hover:border-brown">View More</Link>
@@ -40,6 +40,10 @@ export default function Comparison() {
 
 
 
+
+            </div>
+            <div className="flex lg:hidden h-[80vh] items-center justify-center  ">
+                <h1 className="font-extrabold">Available in desktop Only</h1>
             </div>
         </>
     )
