@@ -12,18 +12,18 @@ export default function Footer() {
                 <div>
                     <ul className="font-semibold flex flex-col gap-2">
                         <li className="text-grey mb-6">Links</li>
-                        <li><Link className="hover:text-grey font-semibold" href='/'>Home</Link></li>
-                        <li><Link className="hover:text-grey font-semibold" href='/Shop'>Shop</Link></li>
-                        <li><Link className="hover:text-grey font-semibold" href='/About'>About</Link></li>
-                        <li><Link className="hover:text-grey font-semibold" href='./Contact'>Contact</Link></li>
+                        <Link className="hover:text-grey font-semibold" href='/'>Home</Link>
+                        <Link className="hover:text-grey font-semibold" href='/Shop'>Shop</Link>
+                        <Link className="hover:text-grey font-semibold" href='/About'>About</Link>
+                        <Link className="hover:text-grey font-semibold" href='./Contact'>Contact</Link>
                     </ul>
                 </div>
                 <div>
                     <ul className="font-semibold flex flex-col gap-2">
                         <li className="text-grey mb-6">Help</li>
-                        <li><Link className="hover:text-grey font-semibold" href='#'>Payment Options</Link></li>
-                        <li><Link className="hover:text-grey font-semibold" href='#'>Returns</Link></li>
-                        <li><Link className="hover:text-grey font-semibold" href='#'>Privacy Policy</Link></li>
+                        <Link className="hover:text-grey font-semibold" href='#'>Payment Options</Link>
+                        <Link className="hover:text-grey font-semibold" href='#'>Returns</Link>
+                        <Link className="hover:text-grey font-semibold" href='#'>Privacy Policy</Link>
                     </ul>
                 </div>
                 <div>

@@ -1,5 +1,9 @@
-import { Url } from "next/dist/shared/lib/router/router"
-
+export interface CartItem {
+    id: string,
+    image: string,
+    title: string,
+    quantity: number
+}
 export interface fetchFurnitureProps {
     limit: number,
     offset: number,

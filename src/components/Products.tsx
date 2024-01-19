@@ -2,7 +2,7 @@ import Link from "next/link";
 import ProductCard from "./ProductCard";
 import { products } from "@/utils";
 
-let src = products.slice(1, 8)
+let src = products.slice(0, 8)
 
 export default function Products() {
     return (

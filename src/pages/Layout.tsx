@@ -3,9 +3,16 @@ import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import { CartProvider } from "@/contexts/cart"
 import { CompareProvider } from "@/contexts/compare"
+import { ReactNode, ReactPortal } from "react"
+
+
+
+
+
 export default function Layout({ children }: any) {
     return (
         <>
+
             <CartProvider>
                 <CompareProvider>
                     <Navbar />

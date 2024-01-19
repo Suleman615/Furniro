@@ -14,7 +14,7 @@ export default function Navbar() {
 
 
 
-    const { cart, setCart } = useMyCart();
+    const { cart, setCart, saveToLocalStorage } = useMyCart();
 
 
     return (

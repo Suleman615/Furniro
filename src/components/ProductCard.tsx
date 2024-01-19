@@ -2,9 +2,11 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Share2, ArrowLeftRight, Heart, Star, StarHalf } from "lucide-react"
-import { productDetailProps } from "@/types"
+import { CartItem, productDetailProps } from "@/types"
 import { useMyCart } from "@/contexts/cart"
 import { useCompare } from "@/contexts/compare"
+
+
 
 export default function ProductCard({ ID, title, colors, srcImage, stars, statusCode }: productDetailProps) {
     const [focus, setFocus] = useState(false)
@@ -22,16 +24,15 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
 
 
     const updateCart = (event: any) => {
+
         event.preventDefault();
-
-
-        var product = {
+        var product: CartItem = {
             id: ID,
             image: srcImage,
             title: title,
             quantity: 1,
         }
-        let tempcart = cart
+        let tempcart: CartItem[] = [...(cart as CartItem[])]
         tempcart.push(product)
         setCart(tempcart)
         saveToLocalStorage()
@@ -55,14 +56,11 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
 
 
     const addtoFavourite = (event: any) => {
-        console.log('here')
         event.preventDefault();
 
     }
 
-    const saveDetails = () => {
-        localStorage.setItem('productDetail', ID)
-    }
+
 
     return (
         <div onMouseEnter={() => { setFocus(true) }} onMouseLeave={() => setFocus(false)} className=" bg-light w-64  flex flex-col relative  ">
@@ -77,8 +75,8 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
                 </div>
 
                 <div className="flex justify-start ">
-                    {rating.map(() => (
-                        <Star strokeWidth={0} size={15} fill="gold" />
+                    {rating.map((a, index) => (
+                        <Star key={index} strokeWidth={0} size={15} fill="gold" />
                     ))}
                     {variableRating == 0 ? '' : <StarHalf size={15} strokeWidth={0} fill="gold" />
 
@@ -91,11 +89,11 @@ export default function ProductCard({ ID, title, colors, srcImage, stars, status
                 <p className="font-semibold   ">RP. 7000 $</p>
             </div>
             {focus &&
-                <Link href={`/ProductDetail`} onClick={saveDetails} className="absolute flex flex-col  bg-grey justify-center items-center w-full h-full top-0 bg-opacity-40">
+                <Link href="/ProductDetail" onClick={() => { localStorage.setItem('productDetail', ID) }} className="absolute flex flex-col  bg-grey justify-center items-center w-full h-full top-0 bg-opacity-40">
                     <button onClick={(event) => updateCart(event)} className="bg-white border-0 z-10 btn">Add To Cart</button>
                     <div className="flex text-white gap-3 text-sm  ">
                         <span className="flex items-center  hover:text-brown"><Share2 size={16} />Share</span>
-                        <Link onClick={saveCompare(ID)} href="/Comparison" className="flex items-center z-30  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
+                        <Link onClick={() => saveCompare()} href="/Comparison" className="flex items-center z-30  hover:text-brown"><ArrowLeftRight size={16} />Compare</Link>
                         <button onClick={(event) => addtoFavourite(event)} className="flex items-center  hover:text-brown"><Heart size={16} />Like</button>
                     </div>
 
