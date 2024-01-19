@@ -23,15 +23,17 @@ export default function Navbar() {
 
                 <div className="flex justify-between items-center  w-full md:w-auto">
                     <Link className="relative h-16 w-28" href='/'><Image fill={true} className=" object-contain" src="/assets/logo-name-black.png" alt="" /></Link>
-                    <span className="flex gap-4"><button onClick={() => { setShowCart(true); }} className="hover:text-brown relative visible md:hidden self-end"  ><span className="absolute bg-red-600 rounded-full px-2 -top-3 text-white">{cart.length}</span> <BaggageClaim /></button>
-                        <span onClick={() => { setShowNavbar(!showNavbar) }} className="visible sm:hidden  "><Menu /></span></span>
+                    <span className="flex gap-4">
+                        <button onClick={() => { setShowCart(true); }} className="hover:text-brown relative visible sm:hidden self-end"  ><span className="absolute bg-red-600 rounded-full px-2 -top-3 text-white">{cart.length}</span> <BaggageClaim /></button>
+                        <span onClick={() => { setShowNavbar(!showNavbar) }} className="visible sm:hidden  "><Menu /></span>
+                    </span>
 
                 </div>
                 <div className={` ${(showNavbar) ? 'visible flex' : 'hidden'}  sm:flex flex-col sm:flex-row gap-2 sm:gap-10`}>
-                    <Link className="hover:text-brown font-semibold" href='/'>Home</Link>
-                    <Link className="hover:text-brown font-semibold" href='/Shop'>Shop</Link>
-                    <Link className="hover:text-brown font-semibold" href='/About'>About</Link>
-                    <Link className="hover:text-brown font-semibold" href='./Contact'>Contact</Link>
+                    <Link onClick={() => { setShowNavbar(!showNavbar) }} className="hover:text-brown font-semibold" href='/'>Home</Link>
+                    <Link onClick={() => { setShowNavbar(!showNavbar) }} className="hover:text-brown font-semibold" href='/Shop'>Shop</Link>
+                    <Link onClick={() => { setShowNavbar(!showNavbar) }} className="hover:text-brown font-semibold" href='/About'>About</Link>
+                    <Link onClick={() => { setShowNavbar(!showNavbar) }} className="hover:text-brown font-semibold" href='./Contact'>Contact</Link>
 
                 </div>
                 <div className="hidden md:flex gap-6">
