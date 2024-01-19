@@ -37,7 +37,7 @@ export default function Footer() {
 
             </div>
             <div className="mx-20  py-4 border-t">
-                <p className="text-grey text-center sm:text-left">2023 furino. All rights reverved &copy;</p>
+                <p className="text-grey text-center sm:text-left">2023 furniro. All rights reverved &copy;</p>
             </div>
         </>
     )
