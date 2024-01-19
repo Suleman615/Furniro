@@ -26,7 +26,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Center Image */}
-                <div className="col-span-8 my-2 md:my-20 min-w-80 h-96  md:col-span-2 mx-3 flex items-center relative">
+                <div className="col-span-8 my-2 md:my-20 min-w-80 h-96  md:col-span-2 mx-0 md:mx-3 flex items-center relative">
                     <Image fill={true} className="object-cover" src="/assets/p7.jpg" alt="" />
 
                 </div>
