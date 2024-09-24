@@ -1,12 +1,11 @@
-import { fetchFurnitureProps } from "@/types"
+import { fetchFurnitureProps } from "@/types";
 
 export async function FetchFurniture({ limit }: fetchFurnitureProps) {
   const headers = {
-    'X-RapidAPI-Key': '2056ad5e48msh9d45e10931e9297p1471b9jsna680b87e2511',
-    'X-RapidAPI-Host': 'kohls.p.rapidapi.com'
-  }
+    'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPIDAPI_KEY as string,
+    'X-RapidAPI-Host': process.env.NEXT_PUBLIC_RAPIDAPI_HOST as string,
+  };
 
-  // const response = await fetch(`https://kohls.p.rapidapi.com/products/list?limit=${limit}`, { headers: headers })
-  // return response.json()
-
+  // const response = await fetch(`https://kohls.p.rapidapi.com/products/list?limit=${limit}`, { headers: headers });
+  // return response.json();
 }

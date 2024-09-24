@@ -10,7 +10,7 @@ export default function Contact() {
             <div className="py-10">
                 <div className="text-center">
                     <h3 className="text-lg font-semibold">Get In Touch With US</h3>
-                    <p className="max-w-[30em] mx-auto text-grey text-sm font-semibold">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+                    <p className="max-w-[30em] mx-auto text-grey text-sm font-semibold">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff will Always Be There To Help You Out. Do Not Hesitate!</p>
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-3 mx-3 my-10 md:mx-40">
@@ -62,7 +62,7 @@ export default function Contact() {
                                 <textarea className="form-input" name="message" id="" cols={20} rows={6}></textarea>
                             </span>
 
-                            <button className="btn  ms-6  rounded">Submit</button>
+                            <button type="submit" className="btn  ms-6  rounded">Submit</button>
                         </form>
                     </div>
                 </div>
