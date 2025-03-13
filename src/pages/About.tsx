@@ -1,5 +1,6 @@
 import PageHeading from "@/components/PageHeading";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import Head from "next/head";
 import Image from "next/image";
 
 import { useState } from "react";
@@ -11,6 +12,31 @@ export default function About() {
 
     return (
         <>
+        <Head>
+        <title>Furniro | About</title>
+        <meta name="description" content="Welcome to https://furnirofurniture.vercel.app/About . Read the latest blogs and explore exciting content." />
+        <meta name="keywords" content="ecommerce, shop,furniture, lifestyle" />
+        <meta name="author" content="Ghulam Suleman" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Furniro | About" />
+        <meta property="og:description" content="Visit to read about us at https://furnirofurniture.vercel.app/About" />
+        {/* <meta property="og:image" content="https://https://furnirofurniture.vercel.app/" /> */}
+        <meta property="og:url" content="https://https://furnirofurniture.vercel.app/About" />
+        <meta property="og:type" content="website" />
+
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:title" content="Furniro | About" />
+        <meta property="og:description" content="Visit to read about us at https://furnirofurniture.vercel.app/About" />
+        {/* <meta name="twitter:image" content="https://https://furnirofurniture.vercel.app/" /> */}
+
+        {/* Favicon */}
+        {/* <link rel="icon" href="images/favicon.svg" /> */}
+
+      </Head>
+      
             <PageHeading target="About" />
 
             <div className="grid  md:grid-flow-row grid-cols-2 items-center mx-2 md:mx-20 py-10 ">
