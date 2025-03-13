@@ -14,29 +14,30 @@ export default function About() {
         <>
         <Head>
         <title>Furniro | About</title>
-        <meta name="description" content="Welcome to https://furnirofurniture.vercel.app/About . Read the latest blogs and explore exciting content." />
+        <meta name="description" content="Welcome to Furniro." />
         <meta name="keywords" content="ecommerce, shop,furniture, lifestyle" />
         <meta name="author" content="Ghulam Suleman" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Furniro | About" />
-        <meta property="og:description" content="Visit to read about us at https://furnirofurniture.vercel.app/About" />
-        {/* <meta property="og:image" content="https://https://furnirofurniture.vercel.app/" /> */}
-        <meta property="og:url" content="https://https://furnirofurniture.vercel.app/About" />
+        <meta property="og:description" content="Visit to read about us." />
+        {/* <meta property="og:image" content="https://furnirofurniture.vercel.app/" /> */}
+        <meta property="og:url" content="https://furnirofurniture.vercel.app/About" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Furniro" />
 
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:title" content="Furniro | About" />
-        <meta property="og:description" content="Visit to read about us at https://furnirofurniture.vercel.app/About" />
-        {/* <meta name="twitter:image" content="https://https://furnirofurniture.vercel.app/" /> */}
+        <meta name="twitter:title" content="Furniro | About" />
+        <meta name="twitter:description" content="Visit to read about us." />
+        {/* <meta name="twitter:image" content="https://furnirofurniture.vercel.app/" /> */}
 
         {/* Favicon */}
-        {/* <link rel="icon" href="images/favicon.svg" /> */}
+        <link rel="icon" href="assets/favicon.png" />
 
       </Head>
-      
+
             <PageHeading target="About" />
 
             <div className="grid  md:grid-flow-row grid-cols-2 items-center mx-2 md:mx-20 py-10 ">
